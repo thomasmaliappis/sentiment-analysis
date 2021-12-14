@@ -20,6 +20,7 @@ def read_dataframe(file_path, remove=False):
 def plot_sentiment_distribution(df, title):
     sns.countplot(x='sentiment', data=df)
     plt.title('{} set sentiment distribution'.format(title))
+    plt.savefig('./png/{}_sentiment_distribution.png'.format(str.lower(title)))
     plt.show()
 
 
